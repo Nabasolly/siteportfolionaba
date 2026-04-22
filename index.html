@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naba Solly — Data</title>
+  <title>Naba Solly - Data Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@300;400;500;700&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
@@ -18,11 +19,11 @@
       --sans: 'Syne', sans-serif; --mono: 'DM Mono', monospace;
     }
     body { background:var(--bg); color:var(--ink); font-family:var(--sans); min-height:100vh; display:flex; flex-direction:column; overflow-x:hidden; cursor:none; }
-
+ 
     /* CURSOR */
     .cursor { position:fixed; width:6px; height:6px; background:var(--ink); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform 0.12s ease,width 0.2s,height 0.2s; }
     .cursor-ring { position:fixed; width:32px; height:32px; border:1px solid var(--ink-25); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width 0.2s,height 0.2s; }
-
+ 
     /* HEADER */
     header { position:sticky; top:0; z-index:50; background:var(--bg); display:flex; justify-content:space-between; align-items:center; padding:1.6rem 3.5rem; border-bottom:1px solid var(--ink-12); }
     .logo { display:flex; align-items:center; gap:11px; text-decoration:none; }
@@ -39,7 +40,7 @@
     .lang-btn { font-family:var(--mono); font-size:9px; letter-spacing:0.15em; text-transform:uppercase; background:transparent; border:none; padding:5px 10px; color:var(--ink-25); cursor:none; transition:background 0.2s,color 0.2s; }
     .lang-btn.active { background:var(--ink); color:var(--white); }
     .lang-btn:not(.active):hover { background:var(--bg-alt); color:var(--ink); }
-
+ 
     /* HERO */
     .hero { position:relative; min-height:91vh; display:flex; flex-direction:column; justify-content:flex-end; padding:0 3.5rem 4rem; border-bottom:1px solid var(--ink-12); overflow:hidden; }
     .hero-bg { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
@@ -56,7 +57,7 @@
     .btn-outline .arr { transition:transform 0.2s; }
     .btn-outline:hover { color:var(--ink); }
     .btn-outline:hover .arr { transform:translateX(4px); }
-
+ 
     /* SECTIONS */
     .section { padding:6rem 3.5rem; border-bottom:1px solid var(--ink-12); }
     .section-alt { background:var(--white); }
@@ -67,45 +68,45 @@
     h2 i { font-style:italic; color:var(--ink-50); }
     .rv { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease,transform 0.6s ease; }
     .rv.on { opacity:1; transform:none; }
-
+ 
     /* PROFIL */
     .profil-grid { display:grid; grid-template-columns:260px 1fr; gap:4rem; align-items:start; }
     .profil-photo { width:100%; aspect-ratio:3/4; background:var(--bg-alt); border:1px solid var(--ink-12); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:8px; letter-spacing:0.25em; color:var(--ink-25); text-transform:uppercase; }
     .profil-right { display:flex; flex-direction:column; gap:2.5rem; }
-
+ 
     /* Bloc présentation */
     .profil-about { padding:2rem; background:var(--white); border:1px solid var(--ink-12); }
     .profil-about-label { font-family:var(--mono); font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:var(--ink-25); margin-bottom:1rem; }
     .profil-about-text { font-family:var(--serif); font-size:clamp(1rem,1.6vw,1.2rem); font-weight:400; line-height:1.7; color:var(--ink); }
     .profil-about-text i { font-style:italic; color:var(--ink-50); }
-
+ 
     .info-list { border-top:1px solid var(--ink-12); }
     .info-row { display:flex; justify-content:space-between; align-items:baseline; padding:0.85rem 0; border-bottom:1px solid var(--ink-12); }
     .info-key { font-family:var(--mono); font-size:8.5px; letter-spacing:0.25em; text-transform:uppercase; color:var(--ink-25); }
-    .info-val { font-family:var(--sans); font-size:13px; color:var(--ink-50); }
-
+    .info-val { font-family:var(--sans); font-size:13px; color:var(--ink); }
+ 
     /* PROJETS */
     .projets-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--ink-12); border:1px solid var(--ink-12); }
     .projet-card { background:var(--white); text-decoration:none; color:inherit; cursor:none; display:flex; flex-direction:column; transition:background 0.2s; position:relative; overflow:hidden; }
     .projet-card:hover { background:var(--bg); }
-
+ 
     /* Zone image */
     .pr-img { width:100%; aspect-ratio:16/9; background:var(--bg-alt); border-bottom:1px solid var(--ink-12); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
     .pr-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
     .projet-card:hover .pr-img img { transform:scale(1.04); }
     .pr-img-placeholder { font-family:var(--mono); font-size:8px; letter-spacing:0.25em; text-transform:uppercase; color:var(--ink-25); display:flex; flex-direction:column; align-items:center; gap:0.5rem; }
     .pr-img-placeholder span { font-size:1.5rem; opacity:0.3; }
-
+ 
     .pr-body { padding:1.5rem; display:flex; flex-direction:column; gap:0.8rem; flex:1; }
     .pr-card-top { display:flex; justify-content:space-between; align-items:flex-start; }
-    .pr-num { font-family:var(--mono); font-size:9px; letter-spacing:0.2em; color:var(--ink-25); }
+    .pr-num { font-family:var(--mono); font-size:9px; letter-spacing:0.2em; color:var(--ink); }
     .pr-arrow { font-size:1rem; color:var(--ink-25); transition:transform 0.2s,color 0.2s; }
     .projet-card:hover .pr-arrow { transform:translate(3px,-3px); color:var(--ink); }
     .pr-name { font-family:var(--serif); font-size:clamp(0.95rem,1.4vw,1.2rem); font-weight:400; color:var(--ink); line-height:1.2; }
-    .pr-desc { font-family:var(--mono); font-size:9px; letter-spacing:0.05em; line-height:1.9; color:var(--ink-50); flex:1; }
+    .pr-desc { font-family:var(--mono); font-size:9px; letter-spacing:0.05em; line-height:1.9; color:var(--ink); flex:1; }
     .pr-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:auto; padding-top:0.5rem; }
     .pr-tag { font-family:var(--mono); font-size:8px; letter-spacing:0.15em; text-transform:uppercase; color:var(--ink-50); border:1px solid var(--ink-12); padding:3px 8px; }
-
+ 
     /* COMPÉTENCES */
     .comp-grid { display:grid; grid-template-columns:repeat(5,1fr); border:1px solid var(--ink-12); }
     .comp-col { padding:2rem; border-right:1px solid var(--ink-12); }
@@ -123,7 +124,7 @@
     .tool-item:last-child { border-bottom:none; }
     .soft-tag { font-family:var(--sans); font-size:11px; color:var(--ink); padding:0.45rem 0; border-bottom:1px solid var(--ink-06); }
     .soft-tag:last-child { border-bottom:none; }
-
+ 
     /* CONTACT */
     .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
     .contact-links { display:flex; flex-direction:column; margin-bottom:2rem; }
@@ -140,7 +141,7 @@
     .cv-dl-name { font-family:var(--sans); font-size:13px; color:var(--ink); }
     .cv-dl-arrow { font-size:1.1rem; color:var(--ink-25); transition:transform 0.2s; }
     .cv-download:hover .cv-dl-arrow { transform:translateY(3px); color:var(--ink); }
-
+ 
     /* Formulaire */
     .cf { display:flex; flex-direction:column; }
     .cf-field { display:flex; flex-direction:column; gap:0.4rem; padding:1.1rem 0; border-bottom:1px solid var(--ink-12); }
@@ -152,13 +153,13 @@
     .cf-feedback { font-family:var(--mono); font-size:9px; letter-spacing:0.08em; display:none; }
     .cf-feedback.ok { color:#2d9e5f; display:block; }
     .cf-feedback.err { color:#c0392b; display:block; }
-
+ 
     /* FOOTER */
     footer { padding:1.4rem 3.5rem; display:flex; justify-content:space-between; align-items:center; background:var(--bg-dark); }
     .f-item { font-family:var(--mono); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.3); }
-
+ 
     @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
-
+ 
     /* RESPONSIVE */
     @media (max-width:1100px) { .comp-grid { grid-template-columns:repeat(3,1fr); } }
     @media (max-width:900px) {
@@ -182,7 +183,7 @@
 <body>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursor-ring"></div>
-
+ 
   <!-- HEADER -->
   <header>
     <a class="logo" href="#">
@@ -201,7 +202,7 @@
       </div>
     </nav>
   </header>
-
+ 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"><canvas id="dataCanvas"></canvas></div>
@@ -216,7 +217,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- 01 PROFIL -->
   <section class="section" id="profil">
     <div class="section-head rv">
@@ -226,9 +227,16 @@
     <div class="profil-grid">
       <div class="rv">
         <img src="IMAGE/photo.png" style="width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--ink-12);">
+        <div style="margin-top:1rem;">
+          <p style="font-family:var(--serif);font-size:1.25rem;color:var(--ink);letter-spacing:-0.01em;margin-bottom:0.75rem;">Naba Solly</p>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <span style="font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;background:#2d9e5f;color:#fff;padding:5px 10px;display:inline-block;" data-fr="✦ Disponible dès maintenant — Stage 3 mois" data-en="✦ Available now — 3-month internship">✦ Disponible dès maintenant — Stage 3 mois</span>
+            <span style="font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;background:var(--ink);color:var(--bg);padding:5px 10px;display:inline-block;" data-fr="↗ Alternance 1 an · Sept. 2026 · 1 sem / 1 sem" data-en="↗ Work-study 1 yr · Sept. 2026 · 1 wk / 1 wk">↗ Alternance 1 an · Sept. 2026 · 1 sem / 1 sem</span>
+          </div>
+        </div>
       </div>
       <div class="rv profil-right" style="transition-delay:.12s">
-
+ 
         <!-- Présentation de soi -->
         <div class="profil-about">
           <p class="profil-about-label" data-fr="À propos" data-en="About me">À propos</p>
@@ -238,7 +246,7 @@
             Étudiante en BUT Sciences des Données à l'IUT de Paris, je suis passionnée par la transformation des données brutes en <i>insights actionnables.</i> Rigoureuse et curieuse, j'aime explorer les données pour y révéler des tendances, construire des analyses statistiques solides et produire des visualisations claires qui aident à la prise de décision. Mon parcours m'a conduite à travailler aussi bien sur des problématiques métier:  reporting, pilotage d'indicateurs que sur des sujets académiques en modélisation et séries temporelles.
           </p>
         </div>
-
+ 
          <!-- Infos -->
         <div class="info-list">
           <div class="info-row" style="align-items:flex-start;flex-direction:column;gap:1rem;">
@@ -262,7 +270,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- 02 PROJETS -->
   <section class="section section-alt" id="projets">
     <div class="section-head rv">
@@ -270,7 +278,7 @@
       <h2>Pro<i>jets</i></h2>
     </div>
     <div class="projets-grid">
-
+ 
      <a class="projet-card rv" href="Projets/dashboard excel.pdf" target="_blank" style="transition-delay:.1s">
   <div class="pr-img"><img src="IMAGE/Tableau-de-bord.png" alt="Dashboard CAF"></div>
   <div class="pr-body">
@@ -289,7 +297,7 @@
     </div>
   </div>
 </a>
-
+ 
       <!-- 002 -->
       <a class="projet-card rv" href="Projets/SAE_Automatisation.pdf" target="_blank" style="transition-delay:.1s">
   <div class="pr-img"><img src="IMAGE/Automatisation.png" alt="Automatisation"></div>
@@ -304,7 +312,7 @@
     <div class="pr-tags"><span class="pr-tag">SAS</span><span class="pr-tag">Excel</span></div>
   </div>
 </a>
-
+ 
       <!-- 003 — lien PDF conservé -->
       <!-- 003 — lien PDF conservé -->
       <a class="projet-card rv" href="Projets/rapport_skate.pdf" target="_blank" style="transition-delay:.15s">
@@ -321,8 +329,8 @@ Le projet a inclus le nettoyage des données, la création de variables dérivé
           <div class="pr-tags"><span class="pr-tag">R</span><span class="pr-tag">RStudio</span></div>
         </div>
       </a>
-
-
+ 
+ 
       <!-- 004 -->
       <a class="projet-card rv" href="Projets/CR TEST.pdf" target="_blank" style="transition-delay:.2s">
         <div class="pr-img"><img src="IMAGE/sport.jpg" alt="Matériels Sportifs"></div>
@@ -336,8 +344,8 @@ Tests d’hypothèses sur grands échantillons, analyses d’indépendance (Chi�
           <div class="pr-tags"><span class="pr-tag">R</span><span class="pr-tag">Stats</span></div>
         </div>
       </a>
-
-
+ 
+ 
       <!-- 005 -->
       <a class="projet-card rv" href="Projets/SAE_Domaine_D'application.pptx" target="_blank" style="transition-delay:.25s">
         <div class="pr-img"><img src="IMAGE/medical.jpg" alt="Profils Biologiques"></div>
@@ -352,8 +360,8 @@ Restructuration des données, analyses et visualisations comparatives selon les 
           <div class="pr-tags"><span class="pr-tag">R</span><span class="pr-tag">Biostat</span></div>
         </div>
       </a>
-
-
+ 
+ 
       <!-- 006 — lien PDF conservé -->
       <a class="projet-card rv" href="Projets/sae série temporelle.pdf" target="_blank" style="transition-delay:.3s">
         <div class="pr-img"><img src="IMAGE/Electricite.jpg" alt="Production Électricité"></div>
@@ -370,11 +378,11 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
           <div class="pr-tags"><span class="pr-tag">R</span><span class="pr-tag">ARIMA</span><span class="pr-tag">Time Series</span></div>
         </div>
       </a>
-
-
+ 
+ 
     </div>
   </section>
-
+ 
   <!-- 03 COMPÉTENCES -->
   <section class="section" id="competences">
     <div class="section-head rv">
@@ -382,7 +390,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
       <h2>Compé<i>tences</i></h2>
     </div>
     <div class="comp-grid rv" style="transition-delay:.1s">
-
+ 
       <div class="comp-col">
         <p class="comp-col-title" data-fr="Statistiques" data-en="Statistics">Statistiques</p>
         <div class="comp-item"><span class="comp-name" data-fr="Analyse & Exploitation" data-en="Data Analysis">Analyse & Exploitation</span></div>
@@ -392,7 +400,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
         <div class="comp-item"><span class="comp-name">Sondage</span></div>
         <div class="comp-item"><span class="comp-name">Machine Learning</span></div>
       </div>
-
+ 
       <div class="comp-col">
         <p class="comp-col-title" data-fr="Info. Décisionnelle" data-en="Business Intelligence">Info. Décisionnelle</p>
         <div class="comp-item"><span class="comp-name" data-fr="Apprentissage Supervisé" data-en="Supervised Learning">Apprentissage Supervisé</span></div>
@@ -400,7 +408,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
         <div class="comp-item"><span class="comp-name" data-fr="Gestion BDD" data-en="Database Management">Gestion BDD</span></div>
         <div class="comp-item"><span class="comp-name" data-fr="Reporting & Visualisation" data-en="Reporting & Visualisation">Reporting & Visualisation</span></div>
       </div>
-
+ 
       <div class="comp-col">
         <p class="comp-col-title" data-fr="Outils & Langages" data-en="Tools & Languages">Outils & Langages</p>
         <div class="tool-item">Python</div>
@@ -413,7 +421,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
         <div class="tool-item">HTML</div>
         <div class="tool-item">Suite Microsoft Office</div>
       </div>
-
+ 
       <div class="comp-col">
         <p class="comp-col-title" data-fr="Langues" data-en="Languages">Langues</p>
         <div class="comp-item">
@@ -429,7 +437,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
           <div class="comp-bar-wrap"><div class="comp-bar" style="--w:25%"></div></div>
         </div>
       </div>
-
+ 
       <div class="comp-col">
         <p class="comp-col-title" data-fr="Soft Skills" data-en="Soft Skills">Soft Skills</p>
         <div class="soft-tag" data-fr="Rigueur & précision" data-en="Rigour & precision">Rigueur & précision</div>
@@ -440,10 +448,10 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
         <div class="soft-tag" data-fr="Autonomie" data-en="Autonomy">Autonomie</div>
         <div class="soft-tag" data-fr="Adaptabilité" data-en="Adaptability">Adaptabilité</div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- 04 CONTACT -->
   <section class="section section-alt" id="contact">
     <div class="section-head rv">
@@ -451,7 +459,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
       <h2>Con<i>tact</i></h2>
     </div>
     <div class="contact-grid">
-
+ 
       <!-- Gauche : liens + CV -->
       <div class="rv">
         <div class="contact-links">
@@ -474,7 +482,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
           <span class="cv-dl-arrow">↓</span>
         </a>
       </div>
-
+ 
       <!-- Droite : formulaire mailto fonctionnel -->
       <div class="rv" style="transition-delay:.15s">
         <form class="cf" id="contactForm">
@@ -500,29 +508,29 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
           </div>
         </form>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <span class="f-item">© 2026 Naba Solly</span>
     <span class="f-item" data-fr="Site conçu et développé par moi" data-en="Designed & built by me">Site conçu et développé par moi</span>
   </footer>
-
+ 
   <script>
     // SCROLL REVEAL
     const obs = new IntersectionObserver(els => {
       els.forEach(e => { if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);} });
     }, {threshold:0.1});
     document.querySelectorAll('.rv').forEach(el => obs.observe(el));
-
+ 
     // SKILL BARS
     const barObs = new IntersectionObserver(els => {
       els.forEach(e => { if(e.isIntersecting){e.target.querySelectorAll('.comp-bar').forEach(b=>b.classList.add('on'));barObs.unobserve(e.target);} });
     }, {threshold:0.2});
     document.querySelectorAll('.comp-grid').forEach(g => barObs.observe(g));
-
+ 
     // CURSOR
     const cur = document.getElementById('cursor');
     const ring = document.getElementById('cursor-ring');
@@ -533,7 +541,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
       el.addEventListener('mouseenter',()=>{cur.style.transform='translate(-50%,-50%) scale(2.5)';ring.style.width='50px';ring.style.height='50px';});
       el.addEventListener('mouseleave',()=>{cur.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='32px';ring.style.height='32px';});
     });
-
+ 
     // FORMULAIRE MAILTO
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -553,7 +561,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
       fb.textContent = "Votre client mail va s'ouvrir — merci !";
       fb.className = 'cf-feedback ok';
     });
-
+ 
     // DATA BACKGROUND
     const canvas = document.getElementById('dataCanvas');
     const ctx = canvas.getContext('2d');
@@ -605,7 +613,7 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
       requestAnimationFrame(draw);
     }
     draw();
-
+ 
     // LANGUAGE SWITCHER
     let currentLang='fr';
     function setLang(lang){
@@ -622,4 +630,3 @@ Modélisation ARIMA, évaluation (RMSE, AIC), analyse d’interprétabilité et 
   </script>
 </body>
 </html>
-
